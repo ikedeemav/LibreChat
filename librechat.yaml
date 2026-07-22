@@ -1,0 +1,22 @@
+version: 1.2.8
+cache: true
+
+endpoints:
+  custom:
+    - name: "OpenRouter"
+      apiKey: "${OPENROUTER_KEY}"
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default: [
+          "anthropic/claude-sonnet-4.6",
+          "anthropic/claude-opus-4.6",
+          "anthropic/claude-haiku-4.5",
+          "google/gemini-2.5-flash-image"
+        ]
+        fetch: true
+      titleConvo: true
+      titleModel: "current_model"
+      summarize: false
+      summaryModel: "current_model"
+      forcePrompt: false
+      modelDisplayLabel: "OpenRouter"
